@@ -1,0 +1,3 @@
+function newCustomer(customer) {
+    return    
+}
