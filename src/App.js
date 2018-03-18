@@ -36,6 +36,7 @@ class App extends Component {
           <Route path="/sign-up" exact render={() => <CustomerNew />} />
           <Route path="/login" exact render={() => <CustomerLogin />} />
           <Route path='/cousines' exact render={() => <Cousines cousines={this.state.cousines} />} />
+          
         </div>
       </Router>
     );

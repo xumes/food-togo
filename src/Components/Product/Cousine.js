@@ -10,18 +10,18 @@ class Cousine extends Component {
         }
 
         this.getStore = this.getStore.bind(this)
-        
+
         this.getStore(this.props.params.idCousine)
     }
 
-    getStore(idCousine){
+    getStore(idCousine) {
         const url = `http://api-vanhack-event-sp.azurewebsites.net/api/v1/Cousine/${idCousine}/stores`
         axios
-        .get(url)
-        .then(data => {
-            this.setState({ stores: data.data })
-            this.cousine = idCousine
-        })
+            .get(url)
+            .then(data => {
+                this.setState({ stores: data.data })
+                this.cousine = idCousine
+            })
     }
 
     render() {
