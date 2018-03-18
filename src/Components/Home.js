@@ -40,27 +40,32 @@ class Home extends Component {
     }
 
     render() {
-        let index =0
+        let index = 0
         return (
             <div >
                 <HeaderHome />
                 <div className="container">
                     <h3>Stores</h3>
                     <div className="row">
+
                         {Object.keys(this.state.stores).map(key => {
                             const store = this.state.stores[key]
-                            return <Stores key={key} store={store} />
+                            return (
+                                <div className="col-md-4" key={key}>
+                                    <Stores key={key} store={store} />
+                                </div>
+                            )
                         })}
                     </div>
-
+                    <br />
                     <h3>Cousines</h3>
-                    {/*JSON.stringify(this.state.categorias)*/}
                     <div className="row">
                         {Object.keys(this.state.cousines).map(key => {
                             const cousine = this.state.cousines[key]
                             return [
-                                <Cousines cousine={cousine} key={key} />,
-                                ++index % 4 === 0 && <div key={'c' + index} className="w-100"></div>
+                                <div className="col-md-3" key={key}>
+                                    <Cousines cousine={cousine} key={key} />
+                                </div>
                             ]
                         })}
 

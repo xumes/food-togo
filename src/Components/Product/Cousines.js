@@ -10,7 +10,6 @@ const Cousines = (props) => {
     return (
         <div>
          
-            <div className='container' style={{ paddingTop: '120px' }}>
                 <div className="row">
                     <div className="col-md-12">
                         <ul>
@@ -33,7 +32,6 @@ const Cousines = (props) => {
 
                 </div>
             </div>
-        </div>
     )
 
 }

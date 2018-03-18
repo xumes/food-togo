@@ -7,6 +7,7 @@ import Home from './Components/Home'
 import CustomerNew from './Components/Customer/CustomerNew'
 import CustomerLogin from './Components/Customer/CustomerLogin'
 import Cousines from './Components/Product/Cousines'
+import Products  from './Components/Product/Products'
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class App extends Component {
           <Route path="/sign-up" exact render={() => <CustomerNew />} />
           <Route path="/login" exact render={() => <CustomerLogin />} />
           <Route path='/cousines' exact render={() => <Cousines cousines={this.state.cousines} />} />
-          
+          <Route path='/store/list/:storeId' component={Products} />
         </div>
       </Router>
     );
