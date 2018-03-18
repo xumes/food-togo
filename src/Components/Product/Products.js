@@ -31,9 +31,8 @@ class Products extends Component {
                 <h3>Products</h3>
                 
                     {
-                        this.state.products.map(key => {
-                            const product = key
-                            return <p>{product}</p>
+                        this.state.products.map(product => {
+                            return <p key="{product.id}">{product.name}</p>
                         })
                     }
                 
